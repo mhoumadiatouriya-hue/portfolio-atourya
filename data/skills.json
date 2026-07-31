@@ -6,7 +6,7 @@
     },
     {
         "image": "js.jpg",
-        "title": "javascript",
+        "title": "JavaScript",
         "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires"
     },
     {
@@ -17,16 +17,16 @@
     {
         "image": "gestion-de-projet.png",
         "title": "Gestion de projet",
-        "text": "Analyse des besoins d’un client, définition d’une solution technique répondant aux besoins fonctionnelle, planification du projet"
+        "text": "Analyse des besoins d’un client, définition d’une solution technique répondant aux besoins fonctionnels, planification du projet"
     },
     {
         "image": "optimisation-et-debug.png",
         "title": "Optimisation et debug",
-        "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et performance et publication d’un site en ligne"
+        "text": "Identification des anomalies et correction d’un site existant, optimisation SEO, amélioration des performances et publication d’un site en ligne"
     },
     {
         "image": "test.png",
         "title": "Test",
-        "title ": "Tests exploratoires, unitaires et d’intégration, définition d’une stratégie de test et d’un rédaction d’un cahier de recette, automatisation de tests E2E et d’API"
+        "text": "Tests exploratoires, unitaires et d’intégration, définition d’une stratégie de test, rédaction d’un cahier de recette et automatisation de tests E2E et d’API"
     }
 ]
