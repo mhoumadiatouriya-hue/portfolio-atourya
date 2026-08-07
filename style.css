@@ -1,5 +1,6 @@
-/******* GENERAL *******/
-/* spacing on all sections */
+/******** GENERAL ********/
+
+/* Spacing on all sections */
 #about,
 #skills,
 #portfolio,
@@ -7,95 +8,160 @@
     margin-top: 4rem;
     padding-top: 4rem;
 }
+
 #about h2,
 #skills h2,
 #portfolio h2,
 #contact h2 {
     margin-bottom: 3rem;
 }
+
 #contact {
     padding-bottom: 4rem;
 }
 
-/* display background dark color on navbar scroll */
-.navbarScroll.navbarDark {
-    background-color: #5b5b5b;
+
+/******** NAVIGATION ********/
+
+/* Fond sombre permanent pour garantir un contraste suffisant */
+.navbarScroll {
+    background-color: #212529;
 }
 
-/* hero background image */
+/* Fond lors du scroll */
+.navbarScroll.navbarDark {
+    background-color: #212529;
+}
+
+/* Nom dans la navbar */
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+/* Liens du menu */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+/* Liens au survol et au focus */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+
+/******** HERO ********/
+
 .bgimage {
     height: 100vh;
     max-height: 900px;
-    background: url("images/image1.jpg");
-    background-size: cover;
+    background: url("images/image1.jpg") center / cover no-repeat;
     position: relative;
 }
-/* text css above hero image*/
+
+/* Voile sombre général sur l'image */
+.bgimage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+/* Titre principal */
 .hero_title {
     font-size: 4.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
 }
+
+/* Sous-titre */
 .hero_desc {
     font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 0;
 }
+
+/* Bloc de texte avec fond sombre réel pour garantir le contraste */
 .hero-text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+
+    color: #ffffff;
+    background-color: #212529;
+
+    padding: 2rem 3rem;
+    border-radius: 8px;
+
+    z-index: 1;
 }
 
-/* about */
+
+/******** ABOUT ********/
+
 .imageAboutPage {
     width: 100%;
-}
-.imageAboutPage {
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* skills */
+
+/******** SKILLS ********/
+
 .skillsText.card {
     height: 350px;
     cursor: pointer;
 }
+
 .skillsText img {
     width: 100%;
     height: 150px;
     object-fit: contain;
 }
+
 #skills p {
     text-align: center;
 }
+
 .skillsIcon {
     font-size: 36px;
     text-align: center;
     width: 100%;
 }
+
 .card-title {
     text-align: center;
 }
+
 .card:hover .skillsIcon {
     color: #008000;
 }
+
 .skillsText:hover {
     border: 1px solid #008000;
 }
 
-/* portfolio */
+
+/******** PORTFOLIO ********/
+
 #portfolio p {
     text-align: center;
 }
 
-/* contact */
+
+/******** CONTACT ********/
+
 .contactColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .contactColumn i {
     color: #198754;
 }
-
-/* footer */
