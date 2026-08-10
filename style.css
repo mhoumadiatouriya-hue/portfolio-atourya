@@ -166,9 +166,40 @@
     color: #198754;
 }
 
-/******** RESPONSIVE ********/
+/******** RESPONSIVE GLOBAL ********/
 
-@media screen and (max-width: 768px) {
+/* Gestion cohérente des dimensions */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Évite l'agrandissement automatique du texte sur certains mobiles */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Les images restent toujours dans leur conteneur */
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+/* La navbar fixe ne masque pas les sections lors de la navigation par ancres */
+#home,
+#about,
+#skills,
+#portfolio,
+#contact {
+    scroll-margin-top: 90px;
+}
+
+
+/******** TABLETTES ET ÉCRANS INTERMÉDIAIRES ********/
+
+@media screen and (max-width: 991.98px) {
 
     /***** NAVIGATION *****/
 
@@ -178,84 +209,100 @@
     }
 
     .navbar-brand {
-        font-size: 0.85rem;
+        max-width: calc(100% - 70px);
+        font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+        line-height: 1.2;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .navbar-collapse {
+        width: 100%;
     }
 
     .navbar-nav {
+        width: 100%;
         text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-toggler {
+        flex-shrink: 0;
     }
 
 
     /***** HERO *****/
 
-.bgimage {
-    height: 60vh;
-    min-height: 420px;
-    max-height: 550px;
+    .bgimage {
+        height: 75svh;
+        min-height: 500px;
+        max-height: 700px;
 
-    background-position: center;
-    background-size: cover;
+        background-position: center;
+        background-size: cover;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        position: relative;
+    }
 
-    position: relative;
-    overflow: hidden;
-}
+    .bgimage .container-fluid,
+    .bgimage .row {
+        width: 100%;
+        height: 100%;
 
-.hero-text {
-    position: static;
+        margin: 0;
+        padding: 0;
+    }
 
-    width: calc(100% - 2rem);
-    max-width: 420px;
+    .hero-text {
+        position: absolute;
 
-    transform: none;
+        top: 50%;
+        left: 50%;
 
-    margin: 0 auto;
-    padding: 1.25rem 1rem;
+        transform: translate(-50%, -50%);
 
-    box-sizing: border-box;
+        width: min(90%, 600px);
 
-    background-color: #212529;
+        padding: clamp(1.25rem, 4vw, 2rem);
 
-    text-align: center;
+        text-align: center;
 
-    z-index: 1;
-}
+        background-color: #212529;
 
-.hero_title {
-    width: 100%;
+        z-index: 1;
+    }
 
-    margin: 0 0 0.75rem;
+    .hero_title {
+        margin: 0 0 1rem;
 
-    font-size: clamp(1.4rem, 6vw, 2rem);
-    line-height: 1.2;
+        font-size: clamp(1.8rem, 5vw, 3.5rem);
+        line-height: 1.15;
 
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: normal;
-}
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
 
-.hero_desc {
-    width: 100%;
+    .hero_desc {
+        margin: 0;
 
-    margin: 0;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        line-height: 1.5;
 
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
-    line-height: 1.5;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
 
-    white-space: normal;
-    overflow-wrap: break-word;
-}
 
-    /***** SECTIONS *****/
+    /***** ESPACEMENTS *****/
 
     #about,
     #skills,
     #portfolio,
     #contact {
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         padding-top: 2rem;
     }
 
@@ -264,31 +311,13 @@
     #portfolio h2,
     #contact h2 {
         margin-bottom: 2rem;
-        font-size: 1.75rem;
     }
 
 
     /***** À PROPOS *****/
 
-    #about .container {
-        padding-left: 1.25rem;
-        padding-right: 1.25rem;
-    }
-
-    #about .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    #about .col-lg-4,
-    #about .col-lg-8 {
-        width: 100%;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
     .imageAboutPage {
-        width: min(180px, 70%);
+        width: min(220px, 70%);
         height: auto;
 
         display: block;
@@ -298,29 +327,20 @@
 
     #about p {
         font-size: 1rem;
-        line-height: 1.6;
-
-        text-align: left;
-
-        overflow-wrap: break-word;
+        line-height: 1.65;
     }
 
 
     /***** COMPÉTENCES *****/
 
-    #skills .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .skillsText.card {
         height: auto;
-        min-height: 0;
+        min-height: 100%;
     }
 
     .skillsText img {
         width: 100%;
-        height: 120px;
+        height: 130px;
 
         object-fit: contain;
     }
@@ -329,26 +349,11 @@
         padding: 1.25rem;
     }
 
-    .skillsText .card-title {
-        font-size: 1.3rem;
-    }
-
-    .skillsText .card-text {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
 
     /***** PROJETS *****/
 
-    #portfolio .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     .portfolioContent {
-        width: 100%;
-        margin-bottom: 1.5rem;
+        height: 100%;
     }
 
     .portfolioContent img {
@@ -358,37 +363,175 @@
         object-fit: cover;
     }
 
-    .portfolioContent .card-title {
-        font-size: 1.3rem;
+    .portfolioContent .card-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     .portfolioContent .card-text {
-        font-size: 1rem;
-        line-height: 1.5;
+        flex-grow: 1;
+    }
+
+    .portfolioContent .btn {
+        margin-top: auto;
     }
 
 
     /***** CONTACT *****/
 
-    #contact .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    .contactColumn {
+        text-align: center;
+        margin-bottom: 2rem;
     }
+
+    .contactColumn a {
+        display: inline-block;
+
+        max-width: 100%;
+
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/******** MOBILE ********/
+
+@media screen and (max-width: 767.98px) {
+
+    /***** NAVIGATION *****/
+
+    #home,
+    #about,
+    #skills,
+    #portfolio,
+    #contact {
+        scroll-margin-top: 75px;
+    }
+
+    .navbar-brand {
+        font-size: 0.9rem;
+    }
+
+
+    /***** HERO *****/
+
+    .bgimage {
+        height: 65svh;
+        min-height: 430px;
+        max-height: 560px;
+    }
+
+    .hero-text {
+        width: calc(100% - 2rem);
+
+        padding: 1.25rem 1rem;
+    }
+
+    .hero_title {
+        font-size: clamp(1.5rem, 7vw, 2.3rem);
+        line-height: 1.2;
+    }
+
+    .hero_desc {
+        font-size: clamp(0.95rem, 4vw, 1.15rem);
+        line-height: 1.45;
+    }
+
+
+    /***** À PROPOS *****/
+
+    .imageAboutPage {
+        width: min(180px, 65%);
+
+        margin-bottom: 1.75rem;
+    }
+
+    #about p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /***** COMPÉTENCES *****/
+
+    .skillsText.card {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+
+    .skillsText img {
+        height: 120px;
+    }
+
+
+    /***** PROJETS *****/
+
+    .portfolioContent {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolioContent img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /***** CONTACT *****/
 
     .contactColumn {
         width: 100%;
 
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
 
-        text-align: center;
+    .contactColumn i {
+        font-size: 2.5rem;
     }
 
     .contactColumn h3 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+    }
+}
+
+
+/******** TRÈS PETITS MOBILES ********/
+
+@media screen and (max-width: 359.98px) {
+
+    .navbar-brand {
+        font-size: 0.8rem;
     }
 
-    .contactColumn p {
-        font-size: 1rem;
-        overflow-wrap: anywhere;
+    .hero-text {
+        width: calc(100% - 1.5rem);
+
+        padding: 1rem 0.75rem;
     }
+
+    .hero_title {
+        font-size: 1.35rem;
+    }
+
+    .hero_desc {
+        font-size: 0.9rem;
+    }
+
+    .imageAboutPage {
+        width: 150px;
+    }
+}
+
+
+/******** ACCESSIBILITÉ ********/
+
+/* Focus visible pour la navigation clavier */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible,
+.navbar-toggler:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
 }
