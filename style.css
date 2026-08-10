@@ -58,7 +58,7 @@
 .bgimage {
     height: 100vh;
     max-height: 900px;
-    background: url("images/image1.jpg") center / cover no-repeat;
+    background: url("images/hero-background.webp") center / cover no-repeat;
     position: relative;
 }
 

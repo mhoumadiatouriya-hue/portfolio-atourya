@@ -1,31 +1,31 @@
 [
     {
-        "image": "html-css.jpg",
+        "image": "competence-html-css.webp",
         "title": "HTML - CSS",
         "text": "Intégration d’interfaces responsives et accessibles, utilisation de maquettes Figma, développement d’animations CSS"
     },
     {
-        "image": "js.jpg",
+        "image": "competence-javascript.webp",
         "title": "JavaScript",
         "text": "Manipulation du DOM, création d’éléments dynamiques, gestion de données de formulaires"
     },
     {
-        "image": "react.jpg",
+        "image": "competence-react.webp",
         "title": "React",
         "text": "Création d’applications React, création de composants et manipulation de leur état"
     },
     {
-        "image": "gestion-de-projet.png",
+        "image": "competence-gestion-projet.webp",
         "title": "Gestion de projet",
         "text": "Analyse des besoins d’un client, définition d’une solution technique répondant aux besoins fonctionnels, planification du projet"
     },
     {
-        "image": "optimisation-et-debug.png",
+        "image": "competence-optimisation-debug.webp",
         "title": "Optimisation et debug",
-        "text": "Identification des anomalies et correction d’un site existant, optimisation SEO, amélioration des performances et publication d’un site en ligne"
+        "text": "Identification des anomalies et correction d’un site existant, optimisation SEO et des performances, publication d’un site en ligne"
     },
     {
-        "image": "test.png",
+        "image": "competence-test.webp",
         "title": "Test",
         "text": "Tests exploratoires, unitaires et d’intégration, définition d’une stratégie de test, rédaction d’un cahier de recette et automatisation de tests E2E et d’API"
     }
