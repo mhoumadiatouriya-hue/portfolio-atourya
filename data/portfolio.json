@@ -1,20 +1,20 @@
 [
     {
-        "image": "projet-booki.webp",
-        "title": "Booki",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
-    },
-    {
-        "image": "projet-mon-vieux-grimoire.webp",
-        "title": "Mon Vieux Grimoire",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "image": "projet-sophie-bluel.webp",
+        "title": "Portfolio Sophie Bluel",
+        "text": "Développement en JavaScript des fonctionnalités dynamiques du portfolio d’une architecte : récupération et affichage des projets via API, authentification et gestion de la galerie.",
+        "link": "https://github.com/mhoumadiatouriya-hue/portfolio-architecte-sophie-bluel"
     },
     {
         "image": "projet-kasa.webp",
         "title": "Kasa",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "text": "Développement d’une application de location immobilière avec React : création de composants réutilisables, navigation entre les pages et mise en place de tests avec Vitest et React Testing Library.",
+        "link": "https://github.com/mhoumadiatouriya-hue/kasa"
+    },
+    {
+        "image": "projet-eco-bliss-bath.webp",
+        "title": "Eco Bliss Bath",
+        "text": "Conception et automatisation de tests avec Cypress sur une application e-commerce : tests fonctionnels et E2E, tests API, smoke tests et vérification de scénarios liés au panier, à la connexion et à la sécurité XSS.",
+        "link": "https://github.com/mhoumadiatouriya-hue/OC-Eco-Bliss-Bath-Tests-Automatises"
     }
 ]
